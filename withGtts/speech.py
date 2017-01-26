@@ -16,8 +16,11 @@ mixer.music.play()
 import vlc
 p = vlc.MediaPlayer("hello.mp3")
 p.play()
-"""
+
 import webbrowser
 webbrowser.open("hello.mp3")
+"""
+from subprocess import call
+call(["cvlc", "hello.mp3"])     #"vlc" uses default interface / "cvlc" uses dummy interface module ("without interface")
 
 #root.mainloop()
