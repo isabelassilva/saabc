@@ -5,7 +5,8 @@ from Tkinter import *
 def key(event):
     engine = pyttsx.init()
     if event.char == event.keysym:
-        msg = 'Normal Key %r' % event.char
+        from table import msg_definer
+        msg = msg_definer(event.char)
     elif len(event.char) == 1:
         msg = 'Punctuation Key %r (%r)' % (event.keysym, event.char)
     else:
