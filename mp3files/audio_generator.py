@@ -1,3 +1,4 @@
+#coding:utf-8
 import urllib2
 def internet_on():
     try:
@@ -6,126 +7,141 @@ def internet_on():
     except urllib2.URLError as err:
         return False
 
+__LANGUAGE__ = 'pt-br'
+
+if __LANGUAGE__ == 'en':
+    __LETTER__ = 'Letter'
+    __NUMBER__ = 'Number'
+    __DOT__ = 'dot'
+    __AND__ = 'and'
+
+if __LANGUAGE__ == 'pt-br':
+    __LETTER__ = 'Letra'
+    __NUMBER__ = 'Numero'
+    __DOT__ = 'ponto'
+    __AND__ = 'e'
+
+
 if internet_on():
 
     from gtts import gTTS
     import os.path
 
 # Letters #
-    if not os.path.isfile("A_en.mp3"):
-        tts = gTTS(text='Letter A, dot 1.', lang='en')
-        tts.save("A_en.mp3")
-    if not os.path.isfile("B_en.mp3"):
-        tts = gTTS(text='Letter B, dots 1 and 2.', lang='en')
-        tts.save("B_en.mp3")
-    if not os.path.isfile("C_en.mp3"):
-        tts = gTTS(text='Letter C, dots 1 and 4.', lang='en')
-        tts.save("C_en.mp3")
-    if not os.path.isfile("D_en.mp3"):
-        tts = gTTS(text='Letter D, dots 1, 4 and 5.', lang='en')
-        tts.save("D_en.mp3")
-    if not os.path.isfile("E_en.mp3"):
-        tts = gTTS(text='Letter E, dots 1 and 5.', lang='en')
-        tts.save("E_en.mp3")
-    if not os.path.isfile("F_en.mp3"):
-        tts = gTTS(text='Letter F, dots 1, 2 and 4.', lang='en')
-        tts.save("F_en.mp3")
+    if not os.path.isfile("A_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' A, ' + __DOT__ + ' 1.', lang=__LANGUAGE__)
+        tts.save("A_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("B_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' B, ' + __DOT__ + 's 1 ' + __AND__ + ' 2.', lang=__LANGUAGE__)
+        tts.save("B_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("C_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' C, ' + __DOT__ + 's 1 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("C_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("D_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' D, ' + __DOT__ + 's 1, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("D_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("E_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' E, ' + __DOT__ + 's 1 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("E_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("F_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' F, ' + __DOT__ + 's 1, 2 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("F_" + __LANGUAGE__ + ".mp3")
 
-    if not os.path.isfile("G_en.mp3"):
-        tts = gTTS(text='Letter G, dots 1, 2, 4 and 5.', lang='en')
-        tts.save("G_en.mp3")
-    if not os.path.isfile("H_en.mp3"):
-        tts = gTTS(text='Letter H, dots 1, 2 and 5.', lang='en')
-        tts.save("H_en.mp3")
-    if not os.path.isfile("I_en.mp3"):
-        tts = gTTS(text='Letter I, dots 2 and 4.', lang='en')
-        tts.save("I_en.mp3")
-    if not os.path.isfile("J_en.mp3"):
-        tts = gTTS(text='Letter J, dots 2, 4 and 5.', lang='en')
-        tts.save("J_en.mp3")
-    if not os.path.isfile("K_en.mp3"):
-        tts = gTTS(text='Letter K, dots 1 and 3.', lang='en')
-        tts.save("K_en.mp3")
-    if not os.path.isfile("L_en.mp3"):
-        tts = gTTS(text='Letter L, dots 1, 2 and 3.', lang='en')
-        tts.save("L_en.mp3")
-    if not os.path.isfile("M_en.mp3"):
-        tts = gTTS(text='Letter M, dots 1, 3 and 4.', lang='en')
-        tts.save("M_en.mp3")
+    if not os.path.isfile("G_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' G, ' + __DOT__ + 's 1, 2, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("G_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("H_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' H, ' + __DOT__ + 's 1, 2 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("H_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("I_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' I, ' + __DOT__ + 's 2 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("I_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("J_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' J, ' + __DOT__ + 's 2, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("J_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("K_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' K, ' + __DOT__ + 's 1 ' + __AND__ + ' 3.', lang=__LANGUAGE__)
+        tts.save("K_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("L_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' L, ' + __DOT__ + 's 1, 2 ' + __AND__ + ' 3.', lang=__LANGUAGE__)
+        tts.save("L_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("M_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' M, ' + __DOT__ + 's 1, 3 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("M_" + __LANGUAGE__ + ".mp3")
 
-    if not os.path.isfile("N_en.mp3"):
-        tts = gTTS(text='Letter N, dots 1, 3, 4 and 5.', lang='en')
-        tts.save("N_en.mp3")
-    if not os.path.isfile("O_en.mp3"):
-        tts = gTTS(text='Letter O, dots 1, 3 and 5.', lang='en')
-        tts.save("O_en.mp3")
-    if not os.path.isfile("P_en.mp3"):
-        tts = gTTS(text='Letter P, dots 1, 2, 3 and 4.', lang='en')
-        tts.save("P_en.mp3")
-    if not os.path.isfile("Q_en.mp3"):
-        tts = gTTS(text='Letter Q, dots 1, 2, 3, 4 and 5.', lang='en')
-        tts.save("Q_en.mp3")
-    if not os.path.isfile("R_en.mp3"):
-        tts = gTTS(text='Letter R, dots 1, 2, 3 and 5.', lang='en')
-        tts.save("R_en.mp3")
-    if not os.path.isfile("S_en.mp3"):
-        tts = gTTS(text='Letter S, dots 2, 3 and 4.', lang='en')
-        tts.save("S_en.mp3")
+    if not os.path.isfile("N_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' N, ' + __DOT__ + 's 1, 3, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("N_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("O_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' O, ' + __DOT__ + 's 1, 3 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("O_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("P_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' P, ' + __DOT__ + 's 1, 2, 3 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("P_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("Q_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' Q, ' + __DOT__ + 's 1, 2, 3, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("Q_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("R_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' R, ' + __DOT__ + 's 1, 2, 3 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("R_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("S_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' S, ' + __DOT__ + 's 2, 3 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("S_" + __LANGUAGE__ + ".mp3")
 
-    if not os.path.isfile("T_en.mp3"):
-        tts = gTTS(text='Letter T, dots 2, 3, 4 and 5.', lang='en')
-        tts.save("T_en.mp3")
-    if not os.path.isfile("U_en.mp3"):
-        tts = gTTS(text='Letter U, dots 1, 3 and 6.', lang='en')
-        tts.save("U_en.mp3")
-    if not os.path.isfile("V_en.mp3"):
-        tts = gTTS(text='Letter V, dots 1, 2, 3 and 6.', lang='en')
-        tts.save("V_en.mp3")
-    if not os.path.isfile("W_en.mp3"):
-        tts = gTTS(text='Letter W, dots 2, 4, 5 and 6.', lang='en')
-        tts.save("W_en.mp3")
-    if not os.path.isfile("X_en.mp3"):
-        tts = gTTS(text='Letter X, dots dots 1, 3, 4 and 6.', lang='en')
-        tts.save("X_en.mp3")
-    if not os.path.isfile("Y_en.mp3"):
-        tts = gTTS(text='Letter Y, dots 1, 3, 4, 5 and 6.', lang='en')
-        tts.save("Y_en.mp3")
-    if not os.path.isfile("Z_en.mp3"):
-        tts = gTTS(text='Letter Z, dots 1, 3, 5 and 6.', lang='en')
-        tts.save("Z_en.mp3")
+    if not os.path.isfile("T_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' T, ' + __DOT__ + 's 2, 3, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("T_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("U_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' U, ' + __DOT__ + 's 1, 3 ' + __AND__ + ' 6.', lang=__LANGUAGE__)
+        tts.save("U_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("V_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' V, ' + __DOT__ + 's 1, 2, 3 ' + __AND__ + ' 6.', lang=__LANGUAGE__)
+        tts.save("V_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("W_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' W, ' + __DOT__ + 's 2, 4, 5 ' + __AND__ + ' 6.', lang=__LANGUAGE__)
+        tts.save("W_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("X_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' X, ' + __DOT__ + 's' + __DOT__ + 's 1, 3, 4 ' + __AND__ + ' 6.', lang=__LANGUAGE__)
+        tts.save("X_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("Y_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' Y, ' + __DOT__ + 's 1, 3, 4, 5 ' + __AND__ + ' 6.', lang=__LANGUAGE__)
+        tts.save("Y_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("Z_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__LETTER__ + ' Z, ' + __DOT__ + 's 1, 3, 5 ' + __AND__ + ' 6.', lang=__LANGUAGE__)
+        tts.save("Z_" + __LANGUAGE__ + ".mp3")
 
 # Numbers #
-    if not os.path.isfile("1_en.mp3"):
-        tts = gTTS(text='Number 1, dot 1.', lang='en')
-        tts.save("1_en.mp3")
-    if not os.path.isfile("2_en.mp3"):
-        tts = gTTS(text='Number 2, dots 1 and 2.', lang='en')
-        tts.save("2_en.mp3")
-    if not os.path.isfile("3_en.mp3"):
-        tts = gTTS(text='Number 3, dots 1 and 4.', lang='en')
-        tts.save("3_en.mp3")
-    if not os.path.isfile("4_en.mp3"):
-        tts = gTTS(text='Number 4, dots 1, 4 and 5.', lang='en')
-        tts.save("4_en.mp3")
-    if not os.path.isfile("5_en.mp3"):
-        tts = gTTS(text='Number 5, dots 1 and 5.', lang='en')
-        tts.save("5_en.mp3")
-    if not os.path.isfile("6_en.mp3"):
-        tts = gTTS(text='Number 6, dots 1, 2 and 4.', lang='en')
-        tts.save("6_en.mp3")
+    if not os.path.isfile("1_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 1,' + __DOT__ + ' 1.', lang=__LANGUAGE__)
+        tts.save("1_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("2_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 2,' + __DOT__ + 's 1 ' + __AND__ + ' 2.', lang=__LANGUAGE__)
+        tts.save("2_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("3_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 3,' + __DOT__ + 's 1 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("3_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("4_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 4,' + __DOT__ + 's 1, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("4_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("5_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 5,' + __DOT__ + 's 1 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("5_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("6_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 6,' + __DOT__ + 's 1, 2 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("6_" + __LANGUAGE__ + ".mp3")
 
-    if not os.path.isfile("7_en.mp3"):
-        tts = gTTS(text='Number 7, dots 1, 2, 4 and 5.', lang='en')
-        tts.save("7_en.mp3")
-    if not os.path.isfile("8_en.mp3"):
-        tts = gTTS(text='Number 8, dots 1, 2 and 5.', lang='en')
-        tts.save("8_en.mp3")
-    if not os.path.isfile("9_en.mp3"):
-        tts = gTTS(text='Number 9, dots 2 and 4.', lang='en')
-        tts.save("9_en.mp3")
-    if not os.path.isfile("0_en.mp3"):
-        tts = gTTS(text='Number 0, dots 2, 4 and 5.', lang='en')
-        tts.save("0_en.mp3")
+    if not os.path.isfile("7_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 7,' + __DOT__ + 's 1, 2, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("7_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("8_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 8,' + __DOT__ + 's 1, 2 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("8_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("9_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 9,' + __DOT__ + 's 2 ' + __AND__ + ' 4.', lang=__LANGUAGE__)
+        tts.save("9_" + __LANGUAGE__ + ".mp3")
+    if not os.path.isfile("0_" + __LANGUAGE__ + ".mp3"):
+        tts = gTTS(text=__NUMBER__ + ' 0,' + __DOT__ + 's 2, 4 ' + __AND__ + ' 5.', lang=__LANGUAGE__)
+        tts.save("0_" + __LANGUAGE__ + ".mp3")
 
 else:
     print("This procedure requires a internet conneciont.")
